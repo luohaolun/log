@@ -18,7 +18,7 @@ Project build.gradle:
 Module build.gradle：
 
 	dependencies {
-	        implementation 'com.github.luohaolun:log:1.4'
+	        implementation 'com.github.luohaolun:log:1.5'
 	}
 
 
