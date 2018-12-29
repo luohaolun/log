@@ -38,7 +38,7 @@ fun Any.wtf(maxLen: Int = MaxLength) {
 private fun print(logLevel: String, log: Any, maxLen: Int) {
     var tag = Thread.currentThread().name + try {
         val traces = Thread.currentThread().stackTrace
-        val stackElement = traces[traces.indexOfFirst { it.className == ClassName } + 2]
+        val stackElement = traces[traces.indexOfLast { it.className == ClassName } + 1]
         "(${stackElement.fileName}:${stackElement.lineNumber})"
     } catch (e: Exception) {
         "TAG"
