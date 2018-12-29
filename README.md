@@ -30,15 +30,18 @@ Module build.gradle：
 
 	...
 	
->打印效果
+>打印
 
 	12-29 10:41:20.905 16579-16579/k.lhl.test E/main(MainActivity.kt:15): 123456
 	12-29 10:41:20.906 16579-16704/k.lhl.test V/Thread-4(MainActivity.kt:17): abcdef
 
 
->日志分段打印
+>分段打印
 
 	"123456789".e(4)  // 4 最大打印长度，默认3900
+	
+	// 设置默认长度
+	setLogMaxLength(4000)
 
 
 
