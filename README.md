@@ -18,7 +18,7 @@ Project build.gradle:
 Module build.gradle：
 
 	dependencies {
-	        implementation 'com.github.luohaolun:log:1.5'
+	        implementation 'com.github.luohaolun:log:1.6'
 	}
 
 
@@ -44,6 +44,73 @@ Module build.gradle：
 	setLogMaxLength(4000)
 
 
+ 
+  
+   
+    
+     
+     
+---
+## 系统默认样式对话框
 
 
+### 提示对话框TDialog：
 
+
+>普通
+
+	TDialog(this, "消息内容").show()
+	
+
+
+>设置确定按钮事件
+
+	TDialog(this, "消息内容"){ "点击确定".toast() }
+	
+	
+	
+>设置确定与取消按钮事件
+
+	TDialog(this, "消息内容").setButtons(positive = { "点击确定".toast() }) { "点击取消".toast() }
+	
+	
+ 
+ 
+ 
+ 
+ 
+ 
+
+### 等待对话框PDialog：
+
+	val pDialog = PDialog(this, "正在上传..") { "取消上传".toast() }
+	pDialog.show()
+	
+	
+	
+	
+	
+	
+	
+	
+---
+## View类常用扩展
+
+
+>单击（已处理连续点击）
+
+	view.click { "点击事件".toast() }
+	
+>长按
+
+	view.longClick { "长按事件".toast() }
+	
+>显隐
+	
+	view.visible = true  // or false
+
+
+---
+## 其他
+	123.dp() 	// 数字转换DP
+	123.45.kp(1)	// 保留1位小数 123.5
