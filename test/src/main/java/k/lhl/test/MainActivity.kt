@@ -2,13 +2,8 @@ package k.lhl.test
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.util.Log
-import io.reactivex.Observable
 import kotlinx.android.synthetic.main.activity_main.*
 import lhl.kotlinextends.*
-import java.lang.Exception
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,14 +42,14 @@ class MainActivity : AppCompatActivity() {
 //                e.e()
 //            }
 
-//            TDialog(this, "测试", CANCEL_NO).setButtons(positive = {
-//                "点击确定".toast()
-//            }) {
-//                "点击取消".toast()
-//            }
+            "axxxx".let(::pe)
 
-            val pDialog = PDialog(this, "正在上传..") { "取消上传".toast() }
-            pDialog.show()
+
+            TDialog(this, "消息内容") { "点击确定".toast() }
+//            TDialog(this, "消息内容").setButtons({ "点击确定".toast() }) { "点击取消".toast() }
+//
+//            val pDialog = PDialog(this, "正在上传..") { "取消上传".toast() }
+//            pDialog.show()
         }
 
         btnClick.longClick {
@@ -62,5 +57,6 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
+        123.45.kp(1).toast()
     }
 }

@@ -9,3 +9,11 @@ fun String.toast() {
 fun String.longToast() {
     ToastUtils.showLong(this)
 }
+
+fun toast(msg: Any) {
+    ToastUtils.showShort(msg.toString())
+}
+
+fun longToast(msg: Any) {
+    ToastUtils.showLong(msg.toString())
+}

@@ -2,12 +2,18 @@ package lhl.kotlinextends
 
 import android.util.Log
 import java.lang.Exception
+import java.util.*
 
 const val ClassName = "lhl.kotlinextends.LogKt"
 private var maxLength = 3900
 
 fun setLogMaxLength(int: Int) {
     maxLength = int
+}
+
+
+fun pe(log: Any) {
+    print("e", log, maxLength)
 }
 
 fun Any.e() {
