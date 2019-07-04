@@ -18,19 +18,21 @@ Project build.gradle:
 Module build.gradle：
 
 	dependencies {
-	        implementation 'com.github.luohaolun:log:1.6'
+	        implementation 'com.github.luohaolun:log:1.7'
 	}
 
 
 ### 使用：
 
 	123456.e()
+	
+	pe("12345")
 
 	Thread{ "abcdef".v() }.start()
 
 	...
 	
->打印
+>打印（显示线程名 可点击跳转到日志输出位置）
 
 	12-29 10:41:20.905 16579-16579/k.lhl.test E/main(MainActivity.kt:15): 123456
 	12-29 10:41:20.906 16579-16704/k.lhl.test V/Thread-4(MainActivity.kt:17): abcdef
@@ -71,7 +73,7 @@ Module build.gradle：
 	
 >设置确定与取消按钮事件
 
-	TDialog(this, "消息内容").setButtons(positive = { "点击确定".toast() }) { "点击取消".toast() }
+	TDialog(this, "消息内容").setButtons({ "点击确定".toast() }) { "点击取消".toast() }
 	
 	
  
