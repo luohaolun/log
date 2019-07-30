@@ -17,7 +17,7 @@ var TDIALOG_NEGATIVE = "取消"
 
 class TDialog(activity: Activity, message: String = "", private val cancel: Int = CANCEL_ALL, positive: DialogListener? = null) {
 
-    constructor(message: String) : this(ActivityUtils.getTopActivity(), message)
+    constructor(message: String, cancel: Int = CANCEL_ALL, positive: DialogListener? = null) : this(ActivityUtils.getTopActivity(), message, cancel, positive)
 
     private var builder: AlertDialog.Builder = AlertDialog.Builder(activity)
     private var dialog: Dialog? = null

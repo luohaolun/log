@@ -44,8 +44,7 @@ class MainActivity : AppCompatActivity() {
 
             "axxxx".let(::pe)
 
-
-            TDialog(this, "消息内容") { "点击确定".toast() }
+            TDialog("消息内容", CANCEL_NO) { "点击确定".toast() }
 //            TDialog(this, "消息内容").setButtons({ "点击确定".toast() }) { "点击取消".toast() }
 //
 //            val pDialog = PDialog(this, "正在上传..") { "取消上传".toast() }
@@ -57,6 +56,6 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
-        123.45.kp(1).toast()
+        123.45.kp(1).toastLong()
     }
 }
