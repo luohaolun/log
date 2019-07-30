@@ -6,7 +6,7 @@ fun String.toast() {
     ToastUtils.showShort(this)
 }
 
-fun String.longToast() {
+fun String.toastLong() {
     ToastUtils.showLong(this)
 }
 
@@ -14,6 +14,6 @@ fun toast(msg: Any) {
     ToastUtils.showShort(msg.toString())
 }
 
-fun longToast(msg: Any) {
+fun toastLong(msg: Any) {
     ToastUtils.showLong(msg.toString())
 }

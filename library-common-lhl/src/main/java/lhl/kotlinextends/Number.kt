@@ -20,4 +20,4 @@ fun Float.kp(num: Int = defaultNumber): String {
 
 fun Int.dp(): Int = this.toFloat().dp()
 fun Double.dp(): Int = this.toFloat().dp()
-fun Float.dp(): Int = ConvertUtils.px2dp(this)
+fun Float.dp(): Int = ConvertUtils.dp2px(this)
