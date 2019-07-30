@@ -6,7 +6,7 @@ import com.blankj.utilcode.util.ActivityUtils
 
 class PDialog(activity: Activity, message: String, cancel: Int, dismissListener: DialogListener? = null) {
 
-    constructor(message: String) : this(ActivityUtils.getTopActivity(), message)
+    constructor(message: String, cancel: Int = CANCEL_NO) : this(ActivityUtils.getTopActivity(), message, cancel)
 
     constructor(activity: Activity, message: String) : this(activity, message, CANCEL_NO)
 
