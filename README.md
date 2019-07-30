@@ -18,7 +18,7 @@ Project build.gradle:
 Module build.gradle：
 
 	dependencies {
-	        implementation 'com.github.luohaolun:log:1.7'
+	        implementation 'com.github.luohaolun:log:1.8'
 	}
 
 
@@ -61,19 +61,21 @@ Module build.gradle：
 
 >普通
 
-	TDialog(this, "消息内容").show()
+	TDialog(this, "消息内容").show()	//or
+	TDialog("消息内容").show()
 	
 
 
 >设置确定按钮事件
 
-	TDialog(this, "消息内容"){ "点击确定".toast() }
+	TDialog(this, "消息内容"){ "点击确定".toast() }     //or
+	TDialog("消息内容"){ "点击确定".toastLong() }
 	
 	
 	
 >设置确定与取消按钮事件
 
-	TDialog(this, "消息内容").setButtons({ "点击确定".toast() }) { "点击取消".toast() }
+	TDialog("消息内容").setButtons({ "点击确定".toast() }) { "点击取消".toast() }
 	
 	
  
@@ -85,8 +87,8 @@ Module build.gradle：
 
 ### 等待对话框PDialog：
 
-	val pDialog = PDialog(this, "正在上传..") { "取消上传".toast() }
-	pDialog.show()
+	val pDialog = PDialog(this, "正在上传..") { "取消上传".toast() }	//or
+	val pDialog = PDialog("正在上传..").show()
 	
 	
 	
