@@ -44,6 +44,8 @@ class PDialog(activity: Activity, message: String, cancel: Int, dismissListener:
         return this
     }
 
+    fun isShowing() = progressDialog.isShowing
+
     fun dismiss(): PDialog {
         progressDialog.dismiss()
         return this

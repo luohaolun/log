@@ -18,7 +18,7 @@ Project build.gradle:
 Module build.gradle：
 
 	dependencies {
-	        implementation 'com.github.luohaolun:log:1.8'
+	        implementation 'com.github.luohaolun:log:1.9'
 	}
 
 
@@ -103,7 +103,8 @@ Module build.gradle：
 
 >单击（已处理连续点击）
 
-	view.click { "点击事件".toast() }
+	view.click { "点击事件".toast() }        // 默认间隔500ms点击
+	view.click(100) { "点击事件".toast() }   // 间隔100ms点击
 	
 >长按
 

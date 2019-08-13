@@ -39,6 +39,8 @@ class TDialog(activity: Activity, message: String = "", private val cancel: Int 
         return this
     }
 
+    fun isShowing() = dialog?.isShowing ?: false
+
     fun dismiss(): TDialog {
         dialog?.dismiss()
         return this
