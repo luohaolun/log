@@ -58,14 +58,14 @@ class TDialog(activity: Activity, message: String = "", private val cancel: Int 
         return this
     }
 
-    fun setButtons(textPositive: String = TDIALOG_POSITIVE, textNegative: String = TDIALOG_NEGATIVE, positive: DialogListener? = null, negative: DialogListener? = null): TDialog {
+    fun setButtons(textPositive: String = TDIALOG_POSITIVE, textNegative: String = TDIALOG_NEGATIVE, negative: DialogListener? = null, positive: DialogListener? = null): TDialog {
         builder.setPositiveButton(textPositive) { _, _ -> positive?.invoke() }
         builder.setNegativeButton(textNegative) { _, _ -> negative?.invoke() }
         show()
         return this
     }
 
-    fun setButtons(positive: DialogListener? = null, negative: DialogListener? = null): TDialog {
+    fun setButtons(negative: DialogListener? = null, positive: DialogListener? = null): TDialog {
         builder.setPositiveButton(TDIALOG_POSITIVE) { _, _ -> positive?.invoke() }
         builder.setNegativeButton(TDIALOG_NEGATIVE) { _, _ -> negative?.invoke() }
         show()
@@ -86,4 +86,6 @@ class TDialog(activity: Activity, message: String = "", private val cancel: Int 
         builder.setMessage(text)
         return this
     }
+
+    fun getDialog() = dialog
 }

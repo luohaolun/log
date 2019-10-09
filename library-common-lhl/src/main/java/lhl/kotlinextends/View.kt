@@ -36,3 +36,9 @@ var View.visible: Boolean
     set(value) {
         this.visibility = if (value) View.VISIBLE else View.GONE
     }
+
+var View.invisible: Boolean
+    get() = this.visibility == View.INVISIBLE
+    set(value) {
+        this.visibility = if (value) View.INVISIBLE else View.VISIBLE
+    }

@@ -11,8 +11,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         btnClick.click {
             //            123456.e()
-
-            textView.visible = !textView.visible
+            toast(textView.invisible)
+            textView.invisible = !textView.invisible
 
 
 //            ToastUtils.setMsgColor(resources.getColor(R.color.colorAccent))
@@ -42,9 +42,9 @@ class MainActivity : AppCompatActivity() {
 //                e.e()
 //            }
 
-            "axxxx".let(::pe)
-
-            TDialog("消息内容", CANCEL_NO) { "点击确定".toast() }
+//            "axxxx".let(::pe)
+//
+//            TDialog("消息内容", CANCEL_NO) { "点击确定".toast() }
 //            TDialog(this, "消息内容").setButtons({ "点击确定".toast() }) { "点击取消".toast() }
 //
 //            val pDialog = PDialog(this, "正在上传..") { "取消上传".toast() }
