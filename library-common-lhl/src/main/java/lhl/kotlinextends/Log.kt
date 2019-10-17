@@ -11,7 +11,6 @@ fun setLogMaxLength(int: Int) {
     maxLength = int
 }
 
-
 fun pe(log: Any) {
     print("e", log, maxLength)
 }
