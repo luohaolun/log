@@ -63,6 +63,7 @@ fun Any.wtf() {
     print("wtf", this, maxLength)
 }
 
+
 private fun print(logLevel: String, log: Any, maxLen: Int) {
     var tag = Thread.currentThread().name + try {
         val traces = Thread.currentThread().stackTrace
