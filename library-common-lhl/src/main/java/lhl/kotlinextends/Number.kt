@@ -7,7 +7,6 @@ private var defaultNumber = 2
 fun setDefaultNumber(num: Int) {
     defaultNumber = num
 }
-
 /**
  * 保留defaultNumber位小数  省略小数点最后的零
  */
